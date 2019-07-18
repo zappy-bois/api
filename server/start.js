@@ -1,27 +1,9 @@
-const express = require('express');
-const cluster = require('cluster');
-const http = require('http');
-const numCPUs = require('os').cpus().length;
+require('@babel/polyfill');
+require('dotenv').config();
+require('@babel/register')({presets: ['@babel/preset-env']});
 
-const app = express();
+const app = require('./server');
 
-if (cluster.isMaster) {
-  console.log(`Master ${process.pid} is running`);
-
-  // Fork workers.
-  for (let i = 0; i < numCPUs; i++) {
-    cluster.fork();
-  }
-
-  cluster.on('exit', (worker, code, signal) => {
-    console.log(`Worker ${worker.process.pid} died...`);
-  });
-} else {
-  // Workers can share any TCP connection
-  // In this case it is an HTTP server
-
-  app.get('/', (req, res) => res.status(200).json('hello world!'));
-  app.listen(8000);
-
-  console.log(`Worker ${process.pid} started`);
-}
+app.listen(process.env.PORT, () => {
+  console.log(`Server is listening on ${process.env.PORT}`)
+});

@@ -1,4 +1,4 @@
-const controller = require('../Controller2')
+const controller = require('../controllers/Controller2')
 
 module.exports = [
   {
@@ -8,7 +8,7 @@ module.exports = [
   },
   {
     method: 'post',
-    endpoint: '/controller2'
+    endpoint: '/controller2',
     controller: controller,
   }
 ]

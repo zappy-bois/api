@@ -1,4 +1,4 @@
-const controller = require('../Controller1')
+const controller = require('../controllers/Controller1')
 
 module.exports = [
   {
