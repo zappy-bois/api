@@ -21,5 +21,7 @@ module.exports = {
   rules: {
     'class-methods-use-this': 0,
     'no-console': 1,
+    'object-shorthand': 1,
+    'object-curly-spacing': 0,
   },
 };

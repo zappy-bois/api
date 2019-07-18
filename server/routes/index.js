@@ -1,7 +1,7 @@
-const controller1 = require('./controller1');
-const controller2 = require('./controller2');
+import controller1 from './controller1';
+import controller2 from './controller2';
 
 module.exports = [
   ...controller1,
   ...controller2,
-]
+];

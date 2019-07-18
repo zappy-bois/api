@@ -6,4 +6,4 @@ class Controller2 {
   }
 }
 
-module.exports = new Controller2();
+export default new Controller2();

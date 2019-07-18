@@ -1,9 +1,9 @@
-const controller = require('../controllers/Controller1')
+import controller from '../controllers/Controller1';
 
-module.exports = [
+export default [
   {
     method: 'get',
     endpoint: '/endpoint1',
-    controller: controller,
-  }
-]
+    controller,
+  },
+];
