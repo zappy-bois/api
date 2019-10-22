@@ -1,11 +1,11 @@
 {
   "name": "node-cluster",
   "version": "1.0.0",
-  "description": "",
+  "description": "A clustered node server using express",
   "main": "server/start.js",
   "scripts": {
     "start": "node_modules/.bin/nodemon server/start.js",
-    "build": "node_modules/.bin/babel server --out-dir dist --copy-files",
+    "build": "node_modules/.bin/babel server --out-dir dist --copy-files"
   },
   "keywords": [],
   "author": "",
